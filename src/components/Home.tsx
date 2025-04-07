@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 
 import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
@@ -23,7 +23,7 @@ const Home = () => {
     data: userData,
     isLoading: isUserLoading,
     error: userError,
-    refetch: refetchUser,
+
     isError: isUserError,
   } = useQuery({
     queryKey: ['userData', username],

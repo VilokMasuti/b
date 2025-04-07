@@ -56,7 +56,7 @@ export async function fetchCommitActivity(username: string, repo: string): Promi
   }
 }
 
-export async function fetchContributionData(username: string): Promise<number[]> {
+export async function fetchContributionData(_username: string): Promise<number[]> {
   try {
     const mockWeeklyData = Array.from({ length: 52 }, (_, i) => {
       const baseValue = Math.sin(i * 0.2) * 10 + 15;
