@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import SF Pro fonts (Apple's system font) */
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff2')
+    format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff2')
+    format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff2')
+    format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff2')
+    format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Add Playfair Display for elegant headers */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+/* Add Montserrat as a modern sans-serif option */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 246 100% 66%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 246 100% 66%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 246 100% 66%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 246 100% 66%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-['SF_Pro_Display',system-ui,-apple-system,BlinkMacSystemFont,'Inter',sans-serif] antialiased;
+    letter-spacing: -0.02em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-rendering: optimizeLegibility;
+  }
+}
+
+/* Utility classes for stylish fonts */
+.font-sf-pro-display {
+  font-family: 'SF Pro Display', system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Component styling */
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-md hover:-translate-y-1;
+}
+
+/* Gradient text styles */
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400;
+}
+
+.text-gradient-cool {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400;
+}
+
+.text-gradient-warm {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-amber-400 via-pink-400 to-red-400;
+}
+
+/* Typography enhancement classes */
+.text-elegant {
+  @apply font-playfair tracking-normal;
+}
+
+.text-modern {
+  @apply font-montserrat tracking-wide;
+}
+
+.text-tech {
+  @apply font-sf-pro-display tracking-tight;
+}
+
+/* Enhanced glass morphism */
+.glass-morphism {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-lg;
+}
+
+.glass-morphism-dark {
+  @apply bg-black/30 backdrop-blur-md border border-white/5 shadow-lg;
+}
+
+.glass-card-hover {
+  @apply transition-all duration-300;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.glass-card-hover:hover {
+  @apply border-white/20;
+  box-shadow: 0 4px 40px rgba(90, 90, 255, 0.15);
+}
+
+/* GitHub Contribution Calendar Styling */
+.github-contribution {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.github-contribution-0 {
+  background-color: #ebedf0;
+}
+.github-contribution-1 {
+  background-color: #c6e48b;
+}
+.github-contribution-2 {
+  background-color: #7bc96f;
+}
+.github-contribution-3 {
+  background-color: #239a3b;
+}
+.github-contribution-4 {
+  background-color: #196127;
+}
+.github-contribution-5 {
+  background-color: #0f4211;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .apple-glass {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .apple-button {
+    padding: 8px 16px;
+  }
+
+  .hero-background {
+    background-size: 150% 150%;
+  }
+}
+
+/* Enhanced text animations */
+.text-shimmer {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -100% 0; }
+  100% { background-position: 100% 0; }
+}
